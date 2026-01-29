@@ -30,13 +30,7 @@ export function Hero() {
           <div className="space-y-8 text-center lg:text-left order-2 lg:order-1">
             {/* Status Badge */}
             <div className="flex justify-center lg:justify-start">
-              <Badge
-                variant="secondary"
-                className="px-6 py-3 bg-primary/10 text-primary border border-primary/20 backdrop-blur-sm"
-              >
-                <Sparkles className="h-4 w-4 mr-2" />
-                Available for Work
-              </Badge>
+
             </div>
 
             {/* Main Heading */}

@@ -3,21 +3,23 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import lifeByDormLogo from "../assets/lifebydorm-logo.png";
+import tenantShieldLogo from "../assets/tenantshield-logo.png";
 
 export function Projects() {
   const projects = [
     {
       title: "LifeByDorm",
       description: "Architecting a scalable B2C full stack web platform via React, Express, Node.js, MongoDB, Docker, and AWS. Serving content for 30+ universities and 200+ dorms. Features secure REST APIs and S3 integration for user media.",
-      image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&h=400&fit=crop",
-      technologies: ["TypeScript", "React", "Express.js", "Node.js", "MongoDB", "Docker", "AWS S3"],
+      image: lifeByDormLogo,
+      technologies: ["TypeScript", "React", "Express.js", "Node.js", "MongoDB", "Docker", "AWS S3", "AWS Lambda"],
       github: "https://github.com/Jason-Tan1",
       demo: "#"
     },
     {
       title: "TenantShield",
       description: "1st Place Winner. Automated hazard detection using Gemini Vision AI API with 95%+ accuracy. Streamlined housing rights analysis and integrated Google Maps for legal resource location.",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
+      image: tenantShieldLogo,
       technologies: ["React.js", "Express.js", "Node.js", "Gemini API", "Vercel"],
       github: "https://github.com/Jason-Tan1",
       demo: "#"
@@ -45,10 +47,6 @@ export function Projects() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl md:text-4xl">Featured Projects</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            A selection of projects that demonstrate my expertise in full-stack
-            development and modern DevOps practices.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
