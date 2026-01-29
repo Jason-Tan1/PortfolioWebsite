@@ -3,14 +3,14 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import lifeByDormLogo from "../assets/lifebydorm-logo.png";
+import lifeByDormLogo from "../assets/lifebydorm-logo-full.png";
 import tenantShieldLogo from "../assets/tenantshield-logo.png";
 
 export function Projects() {
   const projects = [
     {
       title: "LifeByDorm",
-      description: "Architecting a scalable B2C full stack web platform via React, Express, Node.js, MongoDB, Docker, and AWS. Serving content for 30+ universities and 200+ dorms. Features secure REST APIs and S3 integration for user media.",
+      description: "A full-stack B2C web platform that brings university students across Canada to make informed housing decisions by providing a hub for comparing authentic peer reviews of on-campus dormitories.",
       image: lifeByDormLogo,
       technologies: ["TypeScript", "React", "Express.js", "Node.js", "MongoDB", "Docker", "AWS S3", "AWS Lambda"],
       github: "https://github.com/Jason-Tan1",
@@ -18,7 +18,7 @@ export function Projects() {
     },
     {
       title: "TenantShield",
-      description: "1st Place Winner. Automated hazard detection using Gemini Vision AI API with 95%+ accuracy. Streamlined housing rights analysis and integrated Google Maps for legal resource location.",
+      description: "(1ST PLACE AT CSHUB HACKATHON) AI-powered tenant rights assistant. Upload photos of mold, pests, leaks, or damage; the app analyzes evidence, cites local housing laws, and drafts a ready-to-send legal notice for tenants to help confront landlords.",
       image: tenantShieldLogo,
       technologies: ["React.js", "Express.js", "Node.js", "Gemini API", "Vercel"],
       github: "https://github.com/Jason-Tan1",
@@ -52,11 +52,11 @@ export function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden">
-              <div className="aspect-video overflow-hidden">
+              <div className="aspect-video overflow-hidden bg-white p-4 flex items-center justify-center">
                 <ImageWithFallback
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                  className="w-full h-full object-contain transition-transform hover:scale-105 duration-300"
                 />
               </div>
               <CardHeader>
