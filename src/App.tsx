@@ -9,6 +9,7 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { ThemeProvider } from "./components/theme-provider";
 import { ThemeToggle } from "./components/theme-toggle";
+import { Toaster } from "./components/ui/sonner";
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -130,6 +131,7 @@ export default function App() {
           </div>
         </footer>
       </div>
+      <Toaster />
     </ThemeProvider>
   );
 }

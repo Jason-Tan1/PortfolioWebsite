@@ -16,7 +16,7 @@ export function Projects() {
       image: lifeByDormLogo,
       technologies: ["TypeScript", "React", "Express.js", "Node.js", "MongoDB", "Docker", "AWS S3", "AWS Lambda"],
       github: "https://github.com/Jason-Tan1/LifeByDorm",
-      demo: "#"
+      demo: "https://lifebydorm.ca"
     },
     {
       title: "TenantShield (1st Place Hackathon)",
@@ -24,7 +24,7 @@ export function Projects() {
       image: tenantShieldLogo,
       technologies: ["React.js", "Express.js", "Node.js", "Gemini API", "Vercel", "Tailwind CSS"],
       github: "https://github.com/Jason-Tan1/TenantShield",
-      demo: "#"
+      demo: "https://tenant-shield-vert.vercel.app"
     },
     {
       title: "OutTheGroupChat",
@@ -32,7 +32,7 @@ export function Projects() {
       image: outTheGCLogo,
       technologies: ["React.js", "Firebase", "Node.js", "Gemini API", "ElevenLabs API", "CSS3"],
       github: "https://github.com/Jason-Tan1/OutTheGroupChat",
-      demo: "#"
+      demo: "https://outthegroupchat1.web.app/"
     },
     {
       title: "E-Commerce Platform",
@@ -40,7 +40,7 @@ export function Projects() {
       image: ecommerceLogo,
       technologies: ["React.js", "Express.js", "Node.js", "Firebase", "Stripe", "CSS3", "HTML5"],
       github: "https://github.com/Jason-Tan1/EcommercePlatform",
-      demo: "#"
+      demo: ""
     }
   ];
 
@@ -80,12 +80,14 @@ export function Projects() {
                       Code
                     </Button>
                   </a>
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                    <Button size="sm" className="gap-2">
-                      <ExternalLink className="h-4 w-4" />
-                      Demo
-                    </Button>
-                  </a>
+                  {project.demo && (
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <Button size="sm" className="gap-2">
+                        <ExternalLink className="h-4 w-4" />
+                        Demo
+                      </Button>
+                    </a>
+                  )}
                 </div>
               </CardContent>
             </Card>

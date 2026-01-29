@@ -2,9 +2,40 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Loader2 } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
 
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/jasontanwork1@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        toast.success("Message sent successfully! I'll get back to you soon.");
+        e.currentTarget.reset();
+      } else {
+        toast.error("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Something went wrong. Please try emailing me directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
@@ -76,24 +107,31 @@ export function Contact() {
             </CardHeader>
             <CardContent>
               <form
-                action="https://formsubmit.co/jasontanwork1@gmail.com"
-                method="POST"
+                onSubmit={handleSubmit}
                 className="space-y-4"
               >
                 {/* FormSubmit configuration */}
                 <input type="hidden" name="_subject" value="New Portfolio Contact!" />
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://jason-tan1.github.io/PortfolioWebsite/" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Input name="name" placeholder="Your Name" required />
-                  <Input name="email" type="email" placeholder="Your Email" required />
+                  <Input name="name" placeholder="Your Name" required disabled={isSubmitting} />
+                  <Input name="email" type="email" placeholder="Your Email" required disabled={isSubmitting} />
                 </div>
-                <Input name="_subject" placeholder="Subject" required />
-                <Textarea name="message" placeholder="Your Message" rows={5} required />
-                <Button type="submit" className="w-full gap-2">
-                  <Send className="h-4 w-4" />
-                  Send Message
+                <Input name="_subject" placeholder="Subject" required disabled={isSubmitting} />
+                <Textarea name="message" placeholder="Your Message" rows={5} required disabled={isSubmitting} />
+                <Button type="submit" className="w-full gap-2" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="h-4 w-4" />
+                      Send Message
+                    </>
+                  )}
                 </Button>
               </form>
             </CardContent>
