@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "./components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
 import { Hero } from "./components/Hero";
 import { Education } from "./components/Education";
 import { Skills } from "./components/Skills";
@@ -113,6 +113,17 @@ export default function App() {
             <p className="text-muted-foreground mb-6">
               Software Engineer | Software Developer | Full-Stack Developer
             </p>
+            <div className="flex justify-center gap-4 mb-6">
+              <a href="https://github.com/Jason-Tan1" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <Github className="h-5 w-5" />
+              </a>
+              <a href="https://linkedin.com/in/jasontan5" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a href="mailto:jasontanwork1@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                <Mail className="h-5 w-5" />
+              </a>
+            </div>
             <p className="text-sm text-muted-foreground">
               © 2025 Jason Tan. All rights reserved.
             </p>

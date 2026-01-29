@@ -76,27 +76,35 @@ export function Hero() {
 
             {/* Social Links */}
             <div className="flex gap-4 justify-center lg:justify-start">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-12 w-12 rounded-full bg-background/50 backdrop-blur-sm border border-primary/10 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
-              >
-                <Github className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-12 w-12 rounded-full bg-background/50 backdrop-blur-sm border border-primary/10 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
-              >
-                <Linkedin className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-12 w-12 rounded-full bg-background/50 backdrop-blur-sm border border-primary/10 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
-              >
-                <Mail className="h-5 w-5" />
-              </Button>
+              <div className="flex gap-4 justify-center lg:justify-start">
+                <a href="https://github.com/Jason-Tan1" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-12 w-12 rounded-full bg-background/50 backdrop-blur-sm border border-primary/10 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
+                  >
+                    <Github className="h-5 w-5" />
+                  </Button>
+                </a>
+                <a href="https://linkedin.com/in/jasontan5" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-12 w-12 rounded-full bg-background/50 backdrop-blur-sm border border-primary/10 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </Button>
+                </a>
+                <a href="mailto:jasontanwork1@gmail.com">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-12 w-12 rounded-full bg-background/50 backdrop-blur-sm border border-primary/10 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
+                  >
+                    <Mail className="h-5 w-5" />
+                  </Button>
+                </a>
+              </div>
             </div>
 
 
