@@ -44,13 +44,12 @@ export function Hero() {
 
               <div className="space-y-4">
                 <p className="text-xl sm:text-2xl text-muted-foreground max-w-lg">
-                  Senior Software Engineer crafting digital experiences with
-                  <span className="text-primary"> extensive</span> expertise
+                  Computer Science Student & Full-Stack Developer
                 </p>
 
                 <p className="text-lg text-muted-foreground/80 max-w-md">
-                  Specializing in full-stack development, DevOps practices, and scalable solutions
-                  that drive business growth.
+                  Building scalable web solutions and leveraging AI to solve real-world problems.
+                  Passionate about full-stack development, cloud infrastructure, and innovative user experiences.
                 </p>
               </div>
             </div>
