@@ -17,8 +17,8 @@ export function Projects() {
       demo: "#"
     },
     {
-      title: "TenantShield",
-      description: "(1ST PLACE AT CSHUB HACKATHON) AI-powered tenant rights assistant. Upload photos of mold, pests, leaks, or damage; the app analyzes evidence, cites local housing laws, and drafts a ready-to-send legal notice for tenants to help confront landlords.",
+      title: "TenantShield (1st Place)",
+      description: "AI-powered tenant rights assistant. Upload photos of mold, pests, leaks, or damage; the app analyzes evidence, cites local housing laws, and drafts a ready-to-send legal notice for tenants to help confront landlords.",
       image: tenantShieldLogo,
       technologies: ["React.js", "Express.js", "Node.js", "Gemini API", "Vercel"],
       github: "https://github.com/Jason-Tan1",
@@ -45,7 +45,7 @@ export function Projects() {
   return (
     <section className="py-20 px-4 bg-secondary/5">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center space-y-4 mb-12">
+        <div className="text-center space-y-2 mb-6">
           <h2 className="text-3xl md:text-4xl">Featured Projects</h2>
         </div>
 

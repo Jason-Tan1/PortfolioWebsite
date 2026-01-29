@@ -3,8 +3,23 @@ import { Badge } from "./ui/badge";
 import { Github, Linkedin, Mail, Download, ArrowDown, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import profilePic from "../assets/profile.jpg";
+import resumePdf from "../assets/Jason_Tan_Resume.pdf";
+
+import { useState, useEffect } from "react";
 
 export function Hero() {
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setShowScrollIndicator(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
@@ -56,21 +71,25 @@ export function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="group relative overflow-hidden px-8 py-6">
-                <span className="relative z-10 flex items-center gap-2">
-                  <Download className="h-5 w-5" />
-                  Download Resume
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </Button>
+              <a href={resumePdf} download="Jason_Tan_Resume.pdf">
+                <Button size="lg" className="group relative overflow-hidden px-8 py-6">
+                  <span className="relative z-10 flex items-center gap-2">
+                    <Download className="h-5 w-5" />
+                    Download Resume
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </Button>
+              </a>
 
-              <Button
-                variant="outline"
-                size="lg"
-                className="px-8 py-6 bg-background/50 backdrop-blur-sm border-primary/20 hover:bg-primary/10"
-              >
-                View My Work
-              </Button>
+              <a href={resumePdf} target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="px-8 py-6 bg-background/50 backdrop-blur-sm border-primary/20 hover:bg-primary/10"
+                >
+                  View My Work
+                </Button>
+              </a>
             </div>
 
             {/* Social Links */}
@@ -142,7 +161,10 @@ export function Hero() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div
+          className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-opacity duration-500 ${showScrollIndicator ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
+        >
           <div className="flex flex-col items-center gap-2 animate-bounce">
             <span className="text-sm text-muted-foreground">Scroll to explore</span>
             <ArrowDown className="h-5 w-5 text-muted-foreground" />
