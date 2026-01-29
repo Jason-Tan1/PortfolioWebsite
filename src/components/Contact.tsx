@@ -74,17 +74,28 @@ export function Contact() {
             <CardHeader>
               <CardTitle>Send a Message</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Input placeholder="Your Name" />
-                <Input placeholder="Your Email" />
-              </div>
-              <Input placeholder="Subject" />
-              <Textarea placeholder="Your Message" rows={5} />
-              <Button className="w-full gap-2">
-                <Send className="h-4 w-4" />
-                Send Message
-              </Button>
+            <CardContent>
+              <form
+                action="https://formsubmit.co/jasontanwork1@gmail.com"
+                method="POST"
+                className="space-y-4"
+              >
+                {/* FormSubmit configuration */}
+                <input type="hidden" name="_subject" value="New Portfolio Contact!" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://jason-tan1.github.io/PortfolioWebsite/" />
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Input name="name" placeholder="Your Name" required />
+                  <Input name="email" type="email" placeholder="Your Email" required />
+                </div>
+                <Input name="_subject" placeholder="Subject" required />
+                <Textarea name="message" placeholder="Your Message" rows={5} required />
+                <Button type="submit" className="w-full gap-2">
+                  <Send className="h-4 w-4" />
+                  Send Message
+                </Button>
+              </form>
             </CardContent>
           </Card>
         </div>
