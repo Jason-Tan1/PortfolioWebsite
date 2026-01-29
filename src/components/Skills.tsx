@@ -17,7 +17,7 @@ export function Skills() {
     {
       icon: Settings,
       title: "Developer Tools",
-      skills: ["MongoDB", "Firebase", "Docker", "Stripe", "Git", "Vercel", "AWS S3", "Lambda"]
+      skills: ["MongoDB", "Firebase", "Docker", "Stripe", "Git", "Vercel", "AWS S3", "AWS Lambda"]
     }
   ];
 
@@ -26,10 +26,7 @@ export function Skills() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl md:text-4xl">Technical Skills</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive expertise across modern development stack with focus on
-            scalable web applications and DevOps practices.
-          </p>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

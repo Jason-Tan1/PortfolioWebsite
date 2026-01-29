@@ -1,5 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { GraduationCap, Award, BookOpen } from "lucide-react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import lassondeLogo from "../assets/lassonde-logo.png";
 
 export function Education() {
     return (
@@ -7,21 +9,28 @@ export function Education() {
             <div className="max-w-4xl mx-auto">
                 <div className="text-center space-y-4 mb-12">
                     <h2 className="text-3xl md:text-4xl">Education</h2>
-                    <p className="text-muted-foreground max-w-2xl mx-auto">
-                        My academic background and achievements.
-                    </p>
+
                 </div>
 
                 <Card>
                     <CardHeader>
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                            <div>
-                                <CardTitle className="flex items-center gap-2 text-xl">
-                                    <GraduationCap className="h-6 w-6 text-primary" />
-                                    Bachelor of Science, Computer Science (Honours)
-                                </CardTitle>
-                                <p className="text-primary mt-1 text-lg">York University, Lassonde School of Engineering</p>
-                                <p className="text-muted-foreground">Toronto, Ontario</p>
+                            <div className="flex items-center gap-4">
+                                <div className="w-16 h-16 rounded-lg overflow-hidden bg-white flex items-center justify-center p-1 shrink-0 border border-border/10">
+                                    <ImageWithFallback
+                                        src={lassondeLogo}
+                                        alt="Lassonde School of Engineering"
+                                        className="w-full h-auto object-contain"
+                                    />
+                                </div>
+                                <div>
+                                    <CardTitle className="flex items-center gap-2 text-xl">
+                                        <GraduationCap className="h-6 w-6 text-primary" />
+                                        Bachelor of Science, Computer Science (Honours)
+                                    </CardTitle>
+                                    <p className="text-primary mt-1 text-lg">York University, Lassonde School of Engineering</p>
+                                    <p className="text-muted-foreground">Toronto, Ontario</p>
+                                </div>
                             </div>
                             <div className="text-right">
                                 <p className="text-muted-foreground font-medium">Expected May 2028</p>
