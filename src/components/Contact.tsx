@@ -12,24 +12,32 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+
     const formData = new FormData(e.currentTarget);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
 
     try {
       const response = await fetch("https://formsubmit.co/ajax/jasontanwork1@gmail.com", {
         method: "POST",
-        body: formData,
         headers: {
+          'Content-Type': 'application/json',
           'Accept': 'application/json'
-        }
+        },
+        body: json
       });
+
+      const result = await response.json();
 
       if (response.ok) {
         toast.success("Message sent successfully! I'll get back to you soon.");
         e.currentTarget.reset();
       } else {
-        toast.error("Failed to send message. Please try again.");
+        console.error("FormSubmit Error:", result);
+        toast.error(result.message || "Failed to send message. Please try again.");
       }
     } catch (error) {
+      console.error("Submission Error:", error);
       toast.error("Something went wrong. Please try emailing me directly.");
     } finally {
       setIsSubmitting(false);
