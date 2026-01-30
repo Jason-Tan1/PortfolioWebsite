@@ -10,6 +10,7 @@ import { Contact } from "./components/Contact";
 import { ThemeProvider } from "./components/theme-provider";
 import { ThemeToggle } from "./components/theme-toggle";
 import { Toaster } from "./components/ui/sonner";
+import { DevpostIcon } from "./components/icons/DevpostIcon";
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -120,6 +121,9 @@ export default function App() {
               </a>
               <a href="https://linkedin.com/in/jasontan5" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
+              </a>
+              <a href="https://devpost.com/jatan2745" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <DevpostIcon className="h-5 w-5" />
               </a>
               <a href="mailto:jasontanwork1@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-5 w-5" />
