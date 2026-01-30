@@ -28,7 +28,7 @@ export function Projects() {
     },
     {
       title: "OutTheGroupChat",
-      description: "AI-powered collaborative travel planner that helps create personalized itineraries and collaborate in real time using React, Firebase, and Gemini AI",
+      description: "AI-powered collaborative travel planner that instantly helps create personalized itineraries and travellers being able to collaborate in real time using React, Firebase, and Gemini AI",
       image: outTheGCLogo,
       technologies: ["React.js", "Firebase", "Node.js", "Gemini API", "ElevenLabs API", "CSS3"],
       github: "https://github.com/Jason-Tan1/OutTheGroupChat",
@@ -41,6 +41,14 @@ export function Projects() {
       technologies: ["React.js", "Express.js", "Node.js", "Firebase", "Stripe", "CSS3", "HTML5"],
       github: "https://github.com/Jason-Tan1/EcommercePlatform",
       demo: ""
+    },
+    {
+      title: "Portfolio Website",
+      description: "My personal portfolio website built with React, TypeScript, and Tailwind CSS, featuring a responsive design, dark mode support, and interactive UI components.",
+      image: "https://placehold.co/600x400/ffffff/000000/png?text=Portfolio+Website",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Lucide React"],
+      github: "https://github.com/Jason-Tan1/PortfolioWebsite",
+      demo: "https://jasontan.dev"
     }
   ];
 
@@ -64,7 +72,7 @@ export function Projects() {
                   className="w-full h-full object-contain transition-transform hover:scale-105 duration-300"
                 />
               </div>
-              <CardHeader className="!pt-12 pb-0">
+              <CardHeader className="!pt-6 sm:!pt-12 pb-0">
                 <CardTitle>{project.title}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-1 !pt-2">
@@ -87,7 +95,7 @@ export function Projects() {
                     <a href={project.demo} target="_blank" rel="noopener noreferrer">
                       <Button size="sm" className="gap-2">
                         <ExternalLink className="h-4 w-4" />
-                        Demo
+                        Website
                       </Button>
                     </a>
                   )}

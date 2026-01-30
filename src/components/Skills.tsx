@@ -15,7 +15,7 @@ export function Skills() {
         { name: "C", logo: "https://skillicons.dev/icons?i=c" },
         { name: "HTML5", logo: "https://skillicons.dev/icons?i=html" },
         { name: "CSS3", logo: "https://skillicons.dev/icons?i=css" },
-        // Assembly doesn't have a standard simple icon usually available easily on these CDNs, using a generic chip for it or just text
+        { name: "Assembly RISC-V", logo: "https://cdn.simpleicons.org/riscv/000000" } // Simple Icons for RISC-V (black color to ensure visibility if supported, or default)
       ]
     },
     {
@@ -23,11 +23,13 @@ export function Skills() {
       title: "Frameworks & Libraries",
       skills: [
         { name: "React.js", logo: "https://skillicons.dev/icons?i=react" },
+        { name: "React Native", logo: "https://skillicons.dev/icons?i=react" }, // React logo
         { name: "Node.js", logo: "https://skillicons.dev/icons?i=nodejs" },
         { name: "Next.js", logo: "https://skillicons.dev/icons?i=nextjs" },
         { name: "Express.js", logo: "https://skillicons.dev/icons?i=express" },
         { name: "Tailwind CSS", logo: "https://skillicons.dev/icons?i=tailwind" },
-        // Testing libraries often less common on these icon sets, but some might exist
+        { name: "JUnit", logo: "https://cdn.simpleicons.org/junit/25A162" }, // JUnit logo
+        { name: "Supertest", logo: "https://skillicons.dev/icons?i=npm" }, // Using NPM logo as fallback/closely related
         { name: "Vitest", logo: "https://skillicons.dev/icons?i=vitest" },
       ]
     },
@@ -38,7 +40,9 @@ export function Skills() {
         { name: "MongoDB", logo: "https://skillicons.dev/icons?i=mongodb" },
         { name: "Firebase", logo: "https://skillicons.dev/icons?i=firebase" },
         { name: "Docker", logo: "https://skillicons.dev/icons?i=docker" },
-        { name: "AWS", logo: "https://skillicons.dev/icons?i=aws" },
+        { name: "AWS Lambda", logo: "https://skillicons.dev/icons?i=aws" },
+        { name: "AWS S3", logo: "https://skillicons.dev/icons?i=aws" },
+        { name: "Stripe", logo: "https://cdn.simpleicons.org/stripe/008CDD" }, // Stripe logo
         { name: "Git", logo: "https://skillicons.dev/icons?i=git" },
         { name: "Vercel", logo: "https://skillicons.dev/icons?i=vercel" },
       ]
@@ -54,6 +58,9 @@ export function Skills() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl">Technical Skills</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Technologies and tools I work with
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -88,35 +95,6 @@ export function Skills() {
                         <span className="text-sm font-medium">{skill.name}</span>
                       </div>
                     ))}
-                    {/* Manually adding those that might not have pretty icons ready in the array above if any were missed or need special handling */}
-                    {category.title === "Languages" && (
-                      <div className="flex items-center gap-2 bg-secondary/50 hover:bg-secondary border border-border/50 hover:border-border px-3 py-2 rounded-lg transition-all duration-200 cursor-default">
-                        <span className="text-sm font-medium">Assembly RISC-V</span>
-                      </div>
-                    )}
-                    {category.title === "Frameworks & Libraries" && (
-                      <>
-                        <div className="flex items-center gap-2 bg-secondary/50 hover:bg-secondary border border-border/50 hover:border-border px-3 py-2 rounded-lg transition-all duration-200 cursor-default">
-                          <span className="text-sm font-medium">React Native</span>
-                        </div>
-                        <div className="flex items-center gap-2 bg-secondary/50 hover:bg-secondary border border-border/50 hover:border-border px-3 py-2 rounded-lg transition-all duration-200 cursor-default">
-                          <span className="text-sm font-medium">JUnit</span>
-                        </div>
-                        <div className="flex items-center gap-2 bg-secondary/50 hover:bg-secondary border border-border/50 hover:border-border px-3 py-2 rounded-lg transition-all duration-200 cursor-default">
-                          <span className="text-sm font-medium">Supertest</span>
-                        </div>
-                      </>
-                    )}
-                    {category.title === "Tools & Platforms" && (
-                      <>
-                        <div className="flex items-center gap-2 bg-secondary/50 hover:bg-secondary border border-border/50 hover:border-border px-3 py-2 rounded-lg transition-all duration-200 cursor-default">
-                          <span className="text-sm font-medium">Stripe</span>
-                        </div>
-                        <div className="flex items-center gap-2 bg-secondary/50 hover:bg-secondary border border-border/50 hover:border-border px-3 py-2 rounded-lg transition-all duration-200 cursor-default">
-                          <span className="text-sm font-medium">AWS Lambda</span>
-                        </div>
-                      </>
-                    )}
                   </div>
                 </CardContent>
               </Card>

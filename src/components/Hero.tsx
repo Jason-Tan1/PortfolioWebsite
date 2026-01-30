@@ -21,7 +21,7 @@ export function Hero() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 lg:pt-0">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5">
         {/* Floating geometric shapes */}
@@ -58,11 +58,11 @@ export function Hero() {
               </h1>
 
               <div className="space-y-4">
-                <p className="text-xl sm:text-2xl text-muted-foreground max-w-lg">
+                <p className="text-xl sm:text-2xl text-muted-foreground max-w-lg mx-auto lg:mx-0">
                   Computer Science Student & Full-Stack Developer
                 </p>
 
-                <p className="text-lg text-muted-foreground/80 max-w-md">
+                <p className="text-lg text-muted-foreground/80 max-w-md mx-auto lg:mx-0">
                   Building scalable web solutions and leveraging AI to solve real-world problems.
                   Passionate about full-stack development, cloud infrastructure, and innovative user experiences.
                 </p>
@@ -137,7 +137,7 @@ export function Hero() {
 
               {/* Main Image Container */}
               <div className="relative z-10 group">
-                <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-sm border-4 border-background/50 shadow-2xl">
+                <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-sm border-4 border-background/50 shadow-2xl">
                   <ImageWithFallback
                     src={profilePic}
                     alt="Jason Tan - Senior Software Engineer"
@@ -149,7 +149,7 @@ export function Hero() {
                 </div>
 
                 {/* Floating Badge */}
-                <div className="absolute -bottom-6 -right-6 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-2xl px-6 py-4 shadow-xl">
+                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-xl sm:rounded-2xl px-4 py-2 sm:px-6 sm:py-4 shadow-xl">
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                     <span className="text-sm">Available for hire</span>

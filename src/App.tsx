@@ -25,7 +25,7 @@ export default function App() {
 
   return (
     <ThemeProvider defaultTheme="system" storageKey="portfolio-theme">
-      <div className="min-h-screen bg-background transition-colors duration-300">
+      <div className="min-h-screen bg-background">
         {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

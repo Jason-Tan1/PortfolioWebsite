@@ -32,11 +32,11 @@ export function Education() {
                 <Card className="border-border/50 shadow-lg hover:shadow-xl transition-all duration-300 bg-card/50 backdrop-blur-sm overflow-hidden group">
 
 
-                    <CardHeader className="p-8">
-                        <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
+                    <CardHeader className="p-4 sm:p-6 md:p-8">
+                        <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 items-center md:items-center">
                             {/* Logo Section */}
                             <div className="mx-auto md:mx-0 shrink-0">
-                                <div className="w-32 h-32 md:w-48 md:h-48 rounded-2xl overflow-hidden bg-white flex items-center justify-center p-4 shadow-md border border-border/10">
+                                <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-xl sm:rounded-2xl overflow-hidden bg-white flex items-center justify-center p-2 sm:p-4 shadow-md border border-border/10">
                                     <ImageWithFallback
                                         src={lassondeLogo}
                                         alt="Lassonde School of Engineering"
@@ -48,18 +48,18 @@ export function Education() {
                             {/* Content Section */}
                             <div className="flex-grow space-y-4 text-center md:text-left w-full">
                                 <div className="space-y-2">
-                                    <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
-                                        <CardTitle className="text-2xl md:text-3xl font-bold flex items-center md:items-start gap-3">
+                                    <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
+                                        <CardTitle className="text-xl sm:text-2xl md:text-3xl font-bold flex items-center md:items-start gap-3">
                                             <span>Bachelor of Science, Computer Science (Honours)</span>
                                         </CardTitle>
 
-                                        <div className="flex items-center justify-center gap-2 text-muted-foreground bg-secondary/30 px-3 py-1 rounded-full text-sm font-medium">
+                                        <div className="flex items-center justify-center gap-2 text-muted-foreground bg-secondary/30 px-3 py-1 rounded-full text-sm font-medium w-fit mx-auto md:mx-0 shrink-0">
                                             <CalendarDays className="h-4 w-4 text-primary" />
                                             <span>Expected May 2028</span>
                                         </div>
                                     </div>
 
-                                    <div className="text-xl text-primary font-medium">
+                                    <div className="text-lg sm:text-xl text-primary font-medium">
                                         York University, Lassonde School of Engineering
                                     </div>
                                     <div className="text-muted-foreground flex items-center justify-center md:justify-start gap-2">
@@ -71,7 +71,7 @@ export function Education() {
                         </div>
                     </CardHeader>
 
-                    <CardContent className="p-8 pt-0 grid md:grid-cols-2 gap-8">
+                    <CardContent className="p-4 sm:p-6 md:p-8 pt-0 grid md:grid-cols-2 gap-6 md:gap-8">
                         {/* Coursework Column */}
                         <div className="space-y-4">
                             <h4 className="flex items-center gap-2 font-semibold text-lg border-b border-border/40 pb-2">

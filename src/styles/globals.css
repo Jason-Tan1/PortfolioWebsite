@@ -131,12 +131,51 @@ html.dark {
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  *:focus,
+  *:focus-visible,
+  *:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Disable text selection cursor/highlighting on non-input elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  div,
+  section,
+  article,
+  header,
+  footer,
+  main,
+  nav {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Allow text selection in form inputs */
+  input,
+  textarea {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
   }
 
   body {
     @apply bg-background text-foreground;
-    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   html {
@@ -147,7 +186,7 @@ html.dark {
   *,
   *::before,
   *::after {
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    /* transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; */
   }
 
   /* Disable transitions on theme toggle to avoid flash */
