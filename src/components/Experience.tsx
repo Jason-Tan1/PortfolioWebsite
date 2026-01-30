@@ -12,51 +12,63 @@ export function Experience() {
       description: "Led and trained 3 new staff members within an 8-person team to manage high-volume shifts, consistently resolving 95%+ of customer issues, directly contributing to enhanced customer satisfaction. Supported junior staff and maintained smooth shift operations through clear guidance and communication.",
       technologies: ["Leadership", "Team Management", "Customer Service", "Training"]
     }
-
   ];
 
   return (
-    <section className="py-20 px-4">
+    <section className="py-24 px-4 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-1/2 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 -z-10" />
+
       <div className="max-w-4xl mx-auto">
-        <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl">Experience</h2>
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-4xl md:text-5xl">Experience</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            My professional background and work history
+          </p>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent">
           {experiences.map((exp, index) => (
-            <Card key={index}>
-              <CardHeader>
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div>
-                    <CardTitle className="flex items-center gap-2">
-                      <Briefcase className="h-5 w-5 text-primary" />
-                      {exp.title}
+            <div key={index} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+
+              {/* Timeline Dot */}
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-border bg-background shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 translate-x-1/2 md:translate-x-0 z-10">
+                <Briefcase className="h-5 w-5 text-primary" />
+              </div>
+
+              {/* Card Content */}
+              <Card className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] border-border/50 bg-card/50 backdrop-blur-sm shadow-md hover:shadow-xl transition-all duration-300">
+                <CardHeader className="pb-3">
+                  <div className="flex flex-col gap-1">
+                    <CardTitle className="text-xl font-bold flex flex-wrap gap-2 items-center justify-between">
+                      <span>{exp.title}</span>
+                      <Badge variant="secondary" className="text-xs font-normal">
+                        {exp.period}
+                      </Badge>
                     </CardTitle>
-                    <p className="text-primary mt-1">{exp.company}</p>
-                  </div>
-                  <div className="flex flex-col md:items-end gap-1">
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Calendar className="h-4 w-4" />
-                      {exp.period}
-                    </div>
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <MapPin className="h-4 w-4" />
-                      {exp.location}
+                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-primary font-medium">
+                      <span>{exp.company}</span>
+                      <span className="flex items-center gap-1 text-muted-foreground font-normal">
+                        <MapPin className="h-3 w-3" />
+                        {exp.location}
+                      </span>
                     </div>
                   </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">{exp.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {exp.technologies.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="outline">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    {exp.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 pt-2 border-t border-border/30">
+                    {exp.technologies.map((tech, techIndex) => (
+                      <Badge key={techIndex} variant="outline" className="border-primary/20 text-primary/80 hover:bg-primary/5">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </div>

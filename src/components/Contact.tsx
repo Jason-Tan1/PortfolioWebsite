@@ -47,8 +47,11 @@ export function Contact() {
   return (
     <section className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl">Contact Me</h2>
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-4xl md:text-5xl">Contact Me</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Get in touch with me
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
