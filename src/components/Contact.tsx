@@ -13,7 +13,8 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
@@ -27,12 +28,11 @@ export function Contact() {
         body: json
       });
 
-      const result = await response.json();
-
       if (response.ok) {
         toast.success("Message sent successfully! I'll get back to you soon.");
-        e.currentTarget.reset();
+        form.reset();
       } else {
+        const result = await response.json();
         console.error("FormSubmit Error:", result);
         toast.error(result.message || "Failed to send message. Please try again.");
       }
