@@ -2,14 +2,25 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import { DevpostIcon } from "./icons/DevpostIcon";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import lifeByDormLogo from "../assets/lifebydorm-logo-full.png";
 import tenantShieldLogo from "../assets/tenantshield-logo.png";
 import outTheGCLogo from "../assets/outthegroupchat-logo.jpg";
 import ecommerceLogo from "../assets/ecommerce-logo.png";
 
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  github: string;
+  demo: string;
+  devpost?: string;
+}
+
 export function Projects() {
-  const projects = [
+  const projects: Project[] = [
     {
       title: "LifeByDorm",
       description: "A full-stack B2C web platform that brings university students across Canada to make informed housing decisions by providing a hub for comparing authentic peer reviews of on-campus dormitories.",
@@ -24,7 +35,8 @@ export function Projects() {
       image: tenantShieldLogo,
       technologies: ["React.js", "Express.js", "Node.js", "Gemini API", "Vercel", "Tailwind CSS"],
       github: "https://github.com/Jason-Tan1/TenantShield",
-      demo: "https://tenant-shield-vert.vercel.app"
+      demo: "https://tenant-shield-vert.vercel.app",
+      devpost: "https://devpost.com/software/tenantshield"
     },
     {
       title: "OutTheGroupChat",
@@ -32,7 +44,8 @@ export function Projects() {
       image: outTheGCLogo,
       technologies: ["React.js", "Firebase", "Node.js", "Gemini API", "ElevenLabs API", "CSS3"],
       github: "https://github.com/Jason-Tan1/OutTheGroupChat",
-      demo: "https://outthegroupchat1.web.app/"
+      demo: "https://outthegroupchat1.web.app/",
+      devpost: "https://devpost.com/software/outthegroupchat-newhacks-2025"
     },
     {
       title: "E-Commerce Platform",
@@ -91,6 +104,14 @@ export function Projects() {
                       Code
                     </Button>
                   </a>
+                  {project.devpost && (
+                    <a href={project.devpost} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="gap-2">
+                        <DevpostIcon className="h-4 w-4" />
+                        Devpost
+                      </Button>
+                    </a>
+                  )}
                   {project.demo && (
                     <a href={project.demo} target="_blank" rel="noopener noreferrer">
                       <Button size="sm" className="gap-2">

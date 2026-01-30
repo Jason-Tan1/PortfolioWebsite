@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Github, Linkedin, Mail, Download, ArrowDown, Sparkles } from "lucide-react";
+import { DevpostIcon } from "./icons/DevpostIcon";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import profilePic from "../assets/profile.jpg";
 import resumePdf from "../assets/Jason_Tan_Resume.pdf";
@@ -111,6 +112,15 @@ export function Hero() {
                     className="h-12 w-12 rounded-full bg-background/50 backdrop-blur-sm border border-primary/10 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
                   >
                     <Linkedin className="h-5 w-5" />
+                  </Button>
+                </a>
+                <a href="https://devpost.com/jatan2745" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-12 w-12 rounded-full bg-background/50 backdrop-blur-sm border border-primary/10 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
+                  >
+                    <DevpostIcon className="h-5 w-5" />
                   </Button>
                 </a>
                 <a href="mailto:jasontanwork1@gmail.com">
