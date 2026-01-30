@@ -25,9 +25,9 @@ export function Hero() {
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5">
         {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-48 h-48 bg-secondary/30 rounded-full blur-3xl animate-pulse delay-700"></div>
-        <div className="absolute bottom-40 left-20 w-40 h-40 bg-accent/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-40 right-20 w-48 h-48 bg-secondary/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-40 left-20 w-40 h-40 bg-accent/20 rounded-full blur-3xl"></div>
 
         {/* Grid pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -151,7 +151,7 @@ export function Hero() {
                 {/* Floating Badge */}
                 <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-xl sm:rounded-2xl px-4 py-2 sm:px-6 sm:py-4 shadow-xl">
                   <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                     <span className="text-sm">Available for hire</span>
                   </div>
                 </div>
@@ -165,7 +165,7 @@ export function Hero() {
           className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-opacity duration-500 ${showScrollIndicator ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
         >
-          <div className="flex flex-col items-center gap-2 animate-bounce">
+          <div className="flex flex-col items-center gap-2">
             <span className="text-sm text-muted-foreground">Scroll to explore</span>
             <ArrowDown className="h-5 w-5 text-muted-foreground" />
           </div>
