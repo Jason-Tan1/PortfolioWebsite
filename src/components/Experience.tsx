@@ -5,6 +5,14 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 export function Experience() {
   const experiences = [
     {
+      title: "Software Developer",
+      company: "YU Blueprint",
+      location: "Toronto, ON",
+      period: "Jan 2026 - Present",
+      description: "Team: Fix the 6ix",
+      technologies: []
+    },
+    {
       title: "Head Waiter",
       company: "Black and White Restaurant",
       location: "Fergus, ON",
@@ -56,16 +64,18 @@ export function Experience() {
                   </div>
                 </CardHeader>
                 <CardContent className="pt-0">
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                  <p className="text-muted-foreground mb-4 leading-relaxed -mt-3">
                     {exp.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 pt-2 border-t border-border/30">
-                    {exp.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="outline" className="border-primary/20 text-primary/80 hover:bg-primary/5">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
+                  {exp.technologies.length > 0 && (
+                    <div className="flex flex-wrap gap-2 pt-2 border-t border-border/30">
+                      {exp.technologies.map((tech, techIndex) => (
+                        <Badge key={techIndex} variant="outline" className="border-primary/20 text-primary/80 hover:bg-primary/5">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </div>
