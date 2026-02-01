@@ -54,7 +54,7 @@ export function Experience() {
                         {exp.period}
                       </Badge>
                     </CardTitle>
-                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-primary font-medium">
+                    <div className="flex flex-wrap items-center justify-between gap-y-1 text-sm text-primary font-medium">
                       <span>{exp.company}</span>
                       <span className="flex items-center gap-1 text-muted-foreground font-normal">
                         <MapPin className="h-3 w-3" />
