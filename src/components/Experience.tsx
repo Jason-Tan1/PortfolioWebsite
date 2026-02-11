@@ -5,6 +5,14 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 export function Experience() {
   const experiences = [
     {
+      title: "Software Engineer Intern",
+      company: "LangPal",
+      location: "Seattle, WA (Remote)",
+      period: "Feb 2026 - Present",
+      description: "Team: Mobile App Development",
+      technologies: []
+    },
+    {
       title: "Software Developer",
       company: "YU Blueprint",
       location: "Toronto, ON",
@@ -27,7 +35,7 @@ export function Experience() {
       {/* Background decoration */}
       <div className="absolute top-1/2 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 -z-10" />
 
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl">Experience</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -48,9 +56,9 @@ export function Experience() {
               <Card className="w-full md:w-[calc(50%-2.5rem)] border-border/50 bg-card/80 shadow-md hover:shadow-xl transition-shadow duration-300">
                 <CardHeader className="pb-0">
                   <div className="flex flex-col gap-1">
-                    <CardTitle className="text-xl font-bold flex flex-wrap gap-2 items-center justify-between">
-                      <span>{exp.title}</span>
-                      <Badge variant="secondary" className="text-xs font-normal">
+                    <CardTitle className="text-xl font-bold flex flex-nowrap gap-2 items-start justify-between">
+                      <span className="break-words">{exp.title}</span>
+                      <Badge variant="secondary" className="text-xs font-normal shrink-0 ml-2">
                         {exp.period}
                       </Badge>
                     </CardTitle>
