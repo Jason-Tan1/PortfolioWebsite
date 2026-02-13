@@ -10,7 +10,7 @@ export function Experience() {
       location: "Seattle, WA (Remote)",
       period: "Feb 2026 - Present",
       description: "Developing a mobile app using Flutter and FastAPI to help users practice languages through interactive conversation tools. Focuses on building smooth user interfaces and a fast database to ensure content loads instantly. Collaborating with the Seattle-based team to develop features and improve performance for iOS and Android.",
-      technologies: []
+      technologies: ["Flutter", "FastAPI", "Firebase", "PostgreSQL", "Docker", "Kubernetes"]
     },
     {
       title: "AI Software Developer",
@@ -26,7 +26,7 @@ export function Experience() {
       location: "Toronto, ON",
       period: "Jan 2026 - Present",
       description: "Building a digital dashboard for the WNH ReGiftcard Program to replace manual spreadsheets. Leading a team of seven to manage over $10,000 in donations, enabling volunteers to track gift card balances and distributions in real-time with a professional, auditable tool.",
-      technologies: []
+      technologies: ["React", "Node.js", "PostgreSQL", "Docker", "Kubernetes"]
     },
     {
       title: "Head Waiter",
