@@ -19,8 +19,8 @@ export default function App() {
     { label: "Home", href: "#home" },
     { label: "Education", href: "#education" },
     { label: "Skills", href: "#skills" },
-    { label: "Projects", href: "#projects" },
     { label: "Experience", href: "#experience" },
+    { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" }
   ];
 
@@ -97,11 +97,11 @@ export default function App() {
           <div id="skills">
             <Skills />
           </div>
-          <div id="projects">
-            <Projects />
-          </div>
           <div id="experience">
             <Experience />
+          </div>
+          <div id="projects">
+            <Projects />
           </div>
           <div id="contact">
             <Contact />

@@ -33,7 +33,7 @@ export function Experience() {
       company: "Black and White Restaurant",
       location: "Fergus, ON",
       period: "July 2020 – Aug 2024",
-      description: "Led and trained 3 new staff members within an 8-person team to manage high-volume shifts, consistently resolving 95%+ of customer issues, directly contributing to enhanced customer satisfaction. Supported junior staff and maintained smooth shift operations through clear guidance and communication.",
+      description: "Provided excellent customer service in a fast-paced restaurant environment. Took orders, served food and beverages, and ensured guest satisfaction. Assisted in maintaining a clean and welcoming dining area while collaborating with team members to deliver a positive dining experience.",
       technologies: ["Leadership", "Team Management", "Customer Service", "Training"]
     }
   ];
