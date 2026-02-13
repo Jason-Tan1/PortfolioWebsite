@@ -13,11 +13,19 @@ export function Experience() {
       technologies: []
     },
     {
+      title: "AI Software Developer",
+      company: "Healthy Nutrition",
+      location: "Toronto, ON",
+      period: "Feb 2026 - Present",
+      description: "Developing interactive AI educational modules for the Natural Health Academy and optimizing a personalized AI nutrition agent to enhance learner engagement and client health outcomes.",
+      technologies: []
+    },
+    {
       title: "Software Developer",
       company: "YU Blueprint",
       location: "Toronto, ON",
       period: "Jan 2026 - Present",
-      description: "Team: Fix the 6ix",
+      description: "Building a digital dashboard for the WNH ReGiftcard Program to replace manual spreadsheets. Leading a team of seven to manage over $10,000 in donations, enabling volunteers to track gift card balances and distributions in real-time with a professional, auditable tool.",
       technologies: []
     },
     {
