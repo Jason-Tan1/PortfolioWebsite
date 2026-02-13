@@ -9,12 +9,12 @@ export function Experience() {
       company: "LangPal",
       location: "Seattle, WA (Remote)",
       period: "Feb 2026 - Present",
-      description: "Team: Mobile App Development",
+      description: "Developing a mobile app using Flutter and FastAPI to help users practice languages through interactive conversation tools. Focuses on building smooth user interfaces and a fast database to ensure content loads instantly. Collaborating with the Seattle-based team to develop features and improve performance for iOS and Android.",
       technologies: []
     },
     {
       title: "AI Software Developer",
-      company: "Healthy Nutrition",
+      company: "Happy Nutrition",
       location: "Toronto, ON",
       period: "Feb 2026 - Present",
       description: "Developing interactive AI educational modules for the Natural Health Academy and optimizing a personalized AI nutrition agent to enhance learner engagement and client health outcomes.",
