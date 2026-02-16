@@ -60,7 +60,7 @@ export function Hero() {
 
               <div className="space-y-4">
                 <p className="text-xl sm:text-2xl text-muted-foreground max-w-lg mx-auto lg:mx-0">
-                  Computer Science Student & Full-Stack Developer
+                  Computer Science Student & Full Stack Engineer
                 </p>
 
                 <p className="text-lg text-muted-foreground/80 max-w-md mx-auto lg:mx-0">
@@ -162,7 +162,7 @@ export function Hero() {
                 <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-xl sm:rounded-2xl px-4 py-2 sm:px-6 sm:py-4 shadow-xl">
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="text-sm">Available for hire</span>
+                    <span className="text-sm">Available for 2026 SWE Summer Internships</span>
                   </div>
                 </div>
               </div>

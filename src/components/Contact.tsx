@@ -112,9 +112,9 @@ export function Contact() {
             </div>
           </div>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Send a Message</CardTitle>
+          <Card className="flex flex-col justify-center">
+            <CardHeader className="text-center pb-2">
+              <CardTitle className="text-2xl">Send a Message</CardTitle>
             </CardHeader>
             <CardContent>
               <form
