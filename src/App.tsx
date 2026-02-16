@@ -18,9 +18,9 @@ export default function App() {
   const navItems = [
     { label: "Home", href: "#home" },
     { label: "Education", href: "#education" },
-    { label: "Skills", href: "#skills" },
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
+    { label: "Skills", href: "#skills" },
     { label: "Contact", href: "#contact" }
   ];
 
@@ -94,14 +94,14 @@ export default function App() {
           <div id="education">
             <Education />
           </div>
-          <div id="skills">
-            <Skills />
-          </div>
           <div id="experience">
             <Experience />
           </div>
           <div id="projects">
             <Projects />
+          </div>
+          <div id="skills">
+            <Skills />
           </div>
           <div id="contact">
             <Contact />

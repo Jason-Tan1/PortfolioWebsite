@@ -8,6 +8,7 @@ import lifeByDormLogo from "../assets/lifebydorm-logo-full.png";
 import tenantShieldLogo from "../assets/tenantshield-logo.png";
 import outTheGCLogo from "../assets/outthegroupchat-logo.jpg";
 import ecommerceLogo from "../assets/ecommerce-logo.png";
+import visualDebuggerLogo from "../assets/visual-debugger-logo.png";
 
 interface Project {
   title: string;
@@ -37,6 +38,15 @@ export function Projects() {
       github: "https://github.com/Jason-Tan1/TenantShield",
       demo: "https://tenant-shield-vert.vercel.app",
       devpost: "https://devpost.com/software/tenantshield"
+    },
+     {
+      title: "Visual Debugger",
+      description: "An AI VS Code extension that helps developers truly learn and understand code through deep visual inspection, moving beyond \"vibecoding\" and AI prompting to build real comprehension.",
+      image: visualDebuggerLogo,
+      technologies: ["VS Code API", "TypeScript", "React", "Gemini API", "ElevenLabs API"],
+      github: "https://github.com/Jason-Tan1/VisualDebugger",
+      demo: "https://marketplace.visualstudio.com/items?itemName=VisualDebugger.visualdebugger",
+      devpost: "https://devpost.com/software/visual-debugger"
     },
     {
       title: "OutTheGroupChat",
