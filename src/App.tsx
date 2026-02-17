@@ -113,7 +113,7 @@ export default function App() {
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="mb-4">Jason Tan</h3>
             <p className="text-muted-foreground mb-6">
-              Software Engineer | Software Developer | Full-Stack Developer
+              Software Engineer | Software Developer | Full Stack Engineer
             </p>
             <div className="flex justify-center gap-4 mb-6">
               <a href="https://github.com/Jason-Tan1" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">

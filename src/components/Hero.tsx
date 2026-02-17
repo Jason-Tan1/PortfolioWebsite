@@ -4,6 +4,7 @@ import { Github, Linkedin, Mail, Download, ArrowDown, Sparkles } from "lucide-re
 import { DevpostIcon } from "./icons/DevpostIcon";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import profilePic from "../assets/profile.jpg";
+import resumePdf from "../assets/Jason_Tan_Resume.pdf";
 
 
 import { useState, useEffect } from "react";
@@ -72,7 +73,7 @@ export function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="/Jason_Tan_Resume.pdf" download="Jason_Tan_Resume.pdf">
+              <a href={resumePdf} download="Jason_Tan_Resume.pdf">
                 <Button size="lg" className="group relative overflow-hidden px-8 py-6">
                   <span className="relative z-10 flex items-center gap-2">
                     <Download className="h-5 w-5" />
@@ -82,7 +83,7 @@ export function Hero() {
                 </Button>
               </a>
 
-              <a href="/Jason_Tan_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href={resumePdf} target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="outline"
                   size="lg"
