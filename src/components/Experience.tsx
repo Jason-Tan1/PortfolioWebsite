@@ -2,6 +2,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
 
+import langPalLogo from "../assets/LangPal.png";
+import happyNutritionLogo from "../assets/HappyNutrition.png";
+import yuBlueprintLogo from "../assets/YUBlueprint.png";
+
 export function Experience() {
   const experiences = [
     {
@@ -10,7 +14,8 @@ export function Experience() {
       location: "Seattle, WA (Remote)",
       period: "Feb 2026 - Present",
       description: "Developing a mobile app using Flutter and FastAPI to help users practice languages through interactive conversation tools. Focuses on building smooth user interfaces and a fast database to ensure content loads instantly. Collaborating with the Seattle-based team to develop features and improve performance for iOS and Android.",
-      technologies: ["Flutter", "FastAPI", "Firebase", "PostgreSQL", "Docker", "Kubernetes"]
+      technologies: ["Flutter", "FastAPI", "Firebase", "PostgreSQL", "Docker", "Kubernetes"],
+      logo: langPalLogo
     },
     {
       title: "AI Software Developer",
@@ -18,7 +23,8 @@ export function Experience() {
       location: "Toronto, ON",
       period: "Feb 2026 - Present",
       description: "Developing interactive AI educational modules for the Natural Health Academy and optimizing a personalized AI nutrition agent to enhance learner engagement and client health outcomes.",
-      technologies: []
+      technologies: [],
+      logo: happyNutritionLogo
     },
     {
       title: "Software Developer",
@@ -26,7 +32,8 @@ export function Experience() {
       location: "Toronto, ON",
       period: "Jan 2026 - Present",
       description: "Building a digital dashboard for the WNH ReGiftcard Program to replace manual spreadsheets. Leading a team of seven to manage over $10,000 in donations, enabling volunteers to track gift card balances and distributions in real-time with a professional, auditable tool.",
-      technologies: ["React", "Node.js", "MongoDB", "Docker", "Kubernetes"]
+      technologies: ["React", "Node.js", "MongoDB", "Docker", "Kubernetes"],
+      logo: yuBlueprintLogo
     },
     {
       title: "Head Waiter",
@@ -56,8 +63,23 @@ export function Experience() {
             <div key={index} className="relative flex flex-col md:flex-row items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
 
               {/* Timeline Dot */}
-              <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-full border border-border bg-background shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
-                <Briefcase className="h-5 w-5 text-primary" />
+              {/* Timeline Dot */}
+              <div 
+                className={`hidden md:flex items-center justify-center w-10 h-10 rounded-full border border-border shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 overflow-hidden ${
+                  exp.company === "LangPal" ? "bg-background p-0" : 
+                  exp.logo ? "bg-white p-1" : "bg-background p-1.5"
+                }`}
+              >
+                {/* @ts-ignore - Validating logo exists on runtime object which we added */}
+                {exp.logo ? (
+                 <img 
+                   src={exp.logo} 
+                   alt={`${exp.company} logo`} 
+                   className="w-full h-full object-contain"
+                 />
+                ) : (
+                  <Briefcase className="h-5 w-5 text-primary" />
+                )}
               </div>
 
               {/* Card Content */}
