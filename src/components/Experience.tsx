@@ -85,20 +85,35 @@ export function Experience() {
               {/* Card Content */}
               <Card className="w-full md:w-[calc(50%-2.5rem)] border-border/50 bg-card/80 shadow-md hover:shadow-xl transition-shadow duration-300">
                 <CardHeader className="pb-0">
-                  <div className="flex flex-col gap-1">
-                    <CardTitle className="text-xl font-bold flex flex-nowrap gap-2 items-start justify-between">
-                      <span className="break-words">{exp.title}</span>
-                      <Badge variant="secondary" className="text-xs font-normal shrink-0 ml-2">
-                        {exp.period}
-                      </Badge>
-                    </CardTitle>
-                    <div className="flex flex-wrap items-center justify-between gap-y-1 text-sm text-primary font-medium">
-                      <span>{exp.company}</span>
-                      <span className="flex items-center gap-1 text-muted-foreground font-normal">
-                        <MapPin className="h-3 w-3" />
-                        {exp.location}
-                      </span>
+                  <div className="flex justify-between items-start gap-4">
+                    <div className="flex flex-col gap-1 flex-1 min-w-0">
+                      <CardTitle className="text-xl font-bold flex flex-nowrap gap-2 items-start justify-between">
+                        <span className="break-words truncate pr-2">{exp.title}</span>
+                        <Badge variant="secondary" className="text-xs font-normal shrink-0 ml-2">
+                          {exp.period}
+                        </Badge>
+                      </CardTitle>
+                      <div className="flex flex-wrap items-center justify-between gap-y-1 text-sm text-primary font-medium">
+                        <span>{exp.company}</span>
+                        <span className="flex items-center gap-1 text-muted-foreground font-normal">
+                          <MapPin className="h-3 w-3" />
+                          {exp.location}
+                        </span>
+                      </div>
                     </div>
+
+                    {/* Mobile Logo */}
+                    {exp.logo && (
+                      <div className={`md:hidden flex-shrink-0 w-12 h-12 rounded-full border border-border overflow-hidden ${
+                         exp.company === "LangPal" ? "bg-background p-0" : "bg-white p-1"
+                      }`}>
+                        <img 
+                          src={exp.logo} 
+                          alt={`${exp.company} logo`} 
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    )}
                   </div>
                 </CardHeader>
                 <CardContent className="pt-0">
