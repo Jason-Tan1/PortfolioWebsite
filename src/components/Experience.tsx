@@ -18,7 +18,7 @@ export function Experience() {
       logo: langPalLogo
     },
     {
-      title: "ML Software Engineer (Contract)",
+      title: "AI Software Engineer (Contract)",
       company: "Happy Nutrition Academy",
       location: "Toronto, ON",
       period: "Feb 2026 - Present",
