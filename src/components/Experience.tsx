@@ -18,11 +18,11 @@ export function Experience() {
       logo: langPalLogo
     },
     {
-      title: "AI Software Engineer (Contract)",
+      title: "ML Software Engineer (Contract)",
       company: "Happy Nutrition Academy",
       location: "Toronto, ON",
       period: "Feb 2026 - Present",
-      description: "Developing interactive AI educational modules for the Natural Health Academy and optimizing a personalized AI nutrition agent to enhance learner engagement and client health outcomes.",
+      description: "Architecting and training an AI-driven content pipeline to automate the creation of interactive educational modules, reducing manual development time. Optimizing a Natural Health AI Agent through rigorous model training to increase the accuracy of personalized nutritional solutions.",
       technologies: [],
       logo: happyNutritionLogo
     },
