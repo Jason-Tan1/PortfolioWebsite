@@ -31,7 +31,7 @@ export function Experience() {
       company: "YU Blueprint",
       location: "Toronto, ON",
       period: "Jan 2026 - Present",
-      description: "Building a digital dashboard for the WNH ReGiftcard Program to replace manual spreadsheets. Leading a team of seven to manage over $10,000 in donations, enabling volunteers to track gift card balances and distributions in real-time with a professional, auditable tool.",
+      description: "Building a digital dashboard for the WNH ReGiftcard Program to replace manual spreadsheets. Managing over $10,000 in donations, enabling volunteers to track gift card balances and distributions in real-time with a professional, auditable tool.",
       technologies: ["React", "Node.js", "MongoDB", "Docker", "Kubernetes"],
       logo: yuBlueprintLogo
     },
