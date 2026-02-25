@@ -64,19 +64,18 @@ export function Experience() {
 
               {/* Timeline Dot */}
               {/* Timeline Dot */}
-              <div 
-                className={`hidden md:flex items-center justify-center w-10 h-10 rounded-full border border-border shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 overflow-hidden ${
-                  exp.company === "LangPal" ? "bg-background p-0" : 
-                  exp.logo ? "bg-white p-1" : "bg-background p-1.5"
-                }`}
+              <div
+                className={`hidden md:flex items-center justify-center w-10 h-10 rounded-full border border-border shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 overflow-hidden ${exp.company === "LangPal" ? "bg-background p-0" :
+                    exp.logo ? "bg-white p-1" : "bg-background p-1.5"
+                  }`}
               >
                 {/* @ts-ignore - Validating logo exists on runtime object which we added */}
                 {exp.logo ? (
-                 <img 
-                   src={exp.logo} 
-                   alt={`${exp.company} logo`} 
-                   className="w-full h-full object-contain"
-                 />
+                  <img
+                    src={exp.logo}
+                    alt={`${exp.company} logo`}
+                    className="w-full h-full object-contain"
+                  />
                 ) : (
                   <Briefcase className="h-5 w-5 text-primary" />
                 )}
@@ -104,12 +103,11 @@ export function Experience() {
 
                     {/* Mobile Logo */}
                     {exp.logo && (
-                      <div className={`md:hidden flex-shrink-0 w-12 h-12 rounded-full border border-border overflow-hidden ${
-                         exp.company === "LangPal" ? "bg-background p-0" : "bg-white p-1"
-                      }`}>
-                        <img 
-                          src={exp.logo} 
-                          alt={`${exp.company} logo`} 
+                      <div className={`md:hidden shrink-0 min-w-12 min-h-12 w-12 h-12 rounded-full border border-border overflow-hidden ${exp.company === "LangPal" ? "bg-background p-0" : "bg-white p-1"
+                        }`}>
+                        <img
+                          src={exp.logo}
+                          alt={`${exp.company} logo`}
                           className="w-full h-full object-contain"
                         />
                       </div>
