@@ -142,17 +142,17 @@ function Skills() {
     <div>
       <div className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Languages:</h2>
-        <p className="text-lg text-muted">Java (Spring), TypeScript, JavaScript, Python, C, SQL, HTML/CSS</p>
+        <p className="text-lg text-muted">Java, TypeScript, JavaScript, Python, C, SQL, HTML/CSS</p>
       </div>
 
       <div className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Frameworks:</h2>
-        <p className="text-lg text-muted">Node.js, React, Express.js, FastAPI, Next.js, React Native, Tailwind CSS</p>
+        <p className="text-lg text-muted">Node.js, React.js, Express.js, FastAPI, Next.js, React Native, Tailwind CSS</p>
       </div>
 
       <div className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Tools/Cloud:</h2>
-        <p className="text-lg text-muted">RESTful APIs, ETL, Git, Jira, Confluence, AWS, SQL Server, PostgreSQL, JUnit, Agile</p>
+        <p className="text-lg text-muted">RESTful APIs, Git, Jira, AWS (EC2, RDS, Lambda, S3), PostgreSQL, JUnit, Agile</p>
       </div>
     </div>
   );
@@ -167,9 +167,6 @@ function Contact() {
       <div className="space-y-2">
         <p className="text-lg">
           Email: <a href="mailto:jasontanwork1@gmail.com" className="underline hover:text-foreground transition-colors">jasontanwork1@gmail.com</a>
-        </p>
-        <p className="text-lg">
-          Phone: <span className="text-muted">(226) 337-7465</span>
         </p>
       </div>
     </div>
