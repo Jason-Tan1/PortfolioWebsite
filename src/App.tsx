@@ -70,7 +70,7 @@ function Experience() {
         <div className="mb-8">
           <p className="text-lg"><span className="font-bold text-foreground">Future Buildings & Toro Steel Buildings</span> (May 2026 - Present)</p>
           <p className="text-lg text-muted">Software Engineer Intern</p>
-          <p className="text-lg text-muted mt-2">Developing backend APIs and internal tools to automate lead routing and workflows for 250+ sales reps and 350,000+ leads.</p>
+          <p className="text-lg text-muted mt-2">Developing backend APIs and internal tools to automate lead routing and workflows for 250+ sales reps and 3,500,000+ leads.</p>
         </div>
 
         <div className="mb-4">
@@ -101,7 +101,7 @@ function Experience() {
         <div className="mb-4">
           <p className="text-lg"><span className="font-bold text-foreground">YU Blueprint</span> (Jan 2026 - Present)</p>
           <p className="text-lg text-muted">Software Developer</p>
-          <p className="text-lg text-muted mt-2">Blueprint is a student-run organization that makes technology accessible to local Non Profit Organizations and small businesses</p>
+          <p className="text-lg text-muted mt-2">Blueprint is a student-run organization that makes technology accessible to local non profit organizations and small businesses</p>
         </div>
       </div>
     </div>
