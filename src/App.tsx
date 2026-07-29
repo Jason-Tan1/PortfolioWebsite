@@ -76,7 +76,8 @@ function Experience() {
         <div className="mb-4">
           <p className="text-lg"><span className="font-bold text-foreground">LifeByDorm</span> (Oct 2025 - Present)</p>
           <p className="text-lg text-muted">Founder</p>
-          <p className="text-lg text-muted mt-2">Founded a student app for university housing reviews, managing all development and growth to reach 8,000+ active users across 100+ universities with 150+ authentic user reviews.</p>
+          <p className="text-lg text-muted mt-2">Founded a student app for university housing reviews, managing all development and growth to reach 10,000+ active users across 100+ universities with 250+ authentic user reviews.</p>
+          <a href="https://lifebydorm.ca" target="_blank" rel="noopener noreferrer" className="text-sm underline text-muted hover:text-foreground mt-2 inline-block">lifebydorm.ca</a>
         </div>
       </div>
 
