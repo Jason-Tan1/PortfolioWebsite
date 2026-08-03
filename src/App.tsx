@@ -5,11 +5,11 @@ import JasonTanResume from './assets/Jason_Tan_Resume.pdf';
 export default function App() {
   const [activeTab, setActiveTab] = useState("Home");
 
-  const navItems = ["Home", "Experience", "Projects", "Skills", "Contact"];
+  const navItems = ["Home", "Experience", "Projects", "Goals", "Skills", "Contact"];
 
   return (
     <div className="container-narrow">
-      <nav className="flex mb-16 space-x-6 text-lg">
+      <nav className="flex flex-wrap mb-16 space-x-6 text-lg gap-y-4">
         {navItems.map((item) => (
           <button
             key={item}
@@ -27,6 +27,7 @@ export default function App() {
         {activeTab === "Home" && <Home />}
         {activeTab === "Experience" && <Experience />}
         {activeTab === "Projects" && <Projects />}
+        {activeTab === "Goals" && <Goals />}
         {activeTab === "Skills" && <Skills />}
         {activeTab === "Contact" && <Contact />}
       </main>
@@ -133,6 +134,47 @@ function Projects() {
         <p className="text-lg"><span className="font-bold text-foreground">OutTheGroupChat</span> (NewHacks 2025, University of Toronto Hackathon)</p>
         <p className="text-lg text-muted mb-2">Developed a collaborative AI-driven itinerary planner that helps groups organize trips using the Gemini API and ElevenLabs for voice summaries.</p>
         <a href="https://github.com/Jason-Tan1/OutTheGroupChat" target="_blank" rel="noopener noreferrer" className="text-sm underline text-muted hover:text-foreground">View Source</a>
+      </div>
+    </div>
+  );
+}
+
+function Goals() {
+  return (
+    <div>
+      <h2 className="text-2xl font-bold mb-8">SMART Goals & Progress</h2>
+      
+      <div className="mb-12">
+        <h3 className="text-xl font-bold text-foreground mb-4">1. Improving Communication in Professional Environments</h3>
+        <p className="text-lg text-muted mb-2"><strong className="text-foreground">What:</strong> I want to improve how I communicate my thoughts and ideas in professional environments by speaking more clearly and confidently with coworkers and managers.</p>
+        <p className="text-lg text-muted mb-2"><strong className="text-foreground">Why:</strong> Strong communication skills are important in professional settings for team discussions, project updates, and collaborating effectively with others. Improving this skill will help me contribute more confidently during meetings and explain my ideas more clearly.</p>
+        <p className="text-lg text-muted mb-4"><strong className="text-foreground">How:</strong> I will volunteer to share updates and summaries during team meetings, organize project notes before discussions with coworkers or managers, and work with my team lead to practice presenting project progress professionally. I will also regularly ask coworkers and supervisors for feedback on my communication skills and personal growth throughout the work term.</p>
+        <div className="bg-muted/10 p-4 rounded-lg">
+          <p className="text-sm font-semibold text-foreground mb-1">Progress Update:</p>
+          <p className="text-sm text-muted">Currently tracking progress by actively organizing my notes before daily standups and I have successfully volunteered to lead two project update meetings this month.</p>
+        </div>
+      </div>
+
+      <div className="mb-12">
+        <h3 className="text-xl font-bold text-foreground mb-4">2. Asking the Right Questions</h3>
+        <p className="text-lg text-muted mb-2"><strong className="text-foreground">What:</strong> I want to improve my ability to ask better and more effective questions when being assigned tasks or working through problems.</p>
+        <p className="text-lg text-muted mb-2"><strong className="text-foreground">Why:</strong> I've noticed that while I do ask questions when given tasks, they are not always the right questions to fully understand the problem or expectations. Improving this skill will help me better understand tasks upfront, communicate more effectively with coworkers, and complete work more efficiently without wasting unnecessary time.</p>
+        <p className="text-lg text-muted mb-4"><strong className="text-foreground">How:</strong> I will take time to think through tasks before asking questions, focus on clarifying requirements and expected outcomes, and ask coworkers or supervisors for feedback on whether my questions are effective. I will also practice summarizing my understanding of tasks during discussions to make sure I fully understand what needs to be done before starting work.</p>
+        <div className="bg-muted/10 p-4 rounded-lg">
+          <p className="text-sm font-semibold text-foreground mb-1">Progress Update:</p>
+          <p className="text-sm text-muted">I have started writing down my questions before approaching my team lead and I am actively practicing summarizing task requirements back to them to ensure alignment.</p>
+        </div>
+      </div>
+
+      <div className="mb-12">
+        <h3 className="text-xl font-bold text-foreground mb-4">3. Learning Practical, Real-World Skills</h3>
+        <p className="text-lg text-muted mb-2"><strong className="text-foreground">What:</strong> I want to learn as many practical, real-world skills as possible that are relevant to my field and future career.</p>
+        <p className="text-lg text-muted mb-2"><strong className="text-foreground">Why:</strong> While school provides important foundational knowledge, I believe many practical skills are learned through real-world experience and hands-on work. Developing these skills during my internship will help me better prepare for full-time roles after graduation and make it easier to apply my previous knowledge in professional environments.</p>
+        <p className="text-lg text-muted mb-4"><strong className="text-foreground">How:</strong> I will actively take on new tasks and responsibilities, ask questions when learning unfamiliar processes, and observe how experienced coworkers approach real-world problems. I will also seek feedback regularly, document what I learn throughout the internship, and apply new skills in projects and day-to-day work whenever possible.</p>
+        <div className="bg-muted/10 p-4 rounded-lg">
+          <p className="text-sm font-semibold text-foreground mb-1">Progress Update:</p>
+          <p className="text-sm text-muted">I'm currently documenting my learnings in a weekly journal and have taken on an unfamiliar backend routing task this sprint to push my practical knowledge.</p>
+        </div>
       </div>
     </div>
   );
