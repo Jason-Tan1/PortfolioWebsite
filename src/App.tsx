@@ -49,7 +49,7 @@ function Home() {
           Hey! I am a Software Engineer studying Computer Science at York University. I am deeply passionate about full stack development, AI integration, and building backend infrastructure that solves real problems.
         </p>
         <p className="text-xl leading-relaxed mb-6">
-          Currently, I work as a Software Engineer Intern at Future Buildings making backend systems that automate daily workflows. I also love building my own projects, like scaling my housing platform LifeByDorm for thousands of students or creating helpful AI tools. When I am not coding, I enjoy hitting the gym, playing basketball, or practicing guitar.
+          Currently, I work as a Software Engineer Intern at Future Buildings making backend systems that automate daily workflows. I also love building my own projects, like scaling my dorm review platform LifeByDorm for thousands of students or creating helpful AI tools. When I am not coding, I enjoy hitting the gym, playing basketball, or practicing guitar.
         </p>
         <div className="flex space-x-8 text-lg">
           <a href="https://github.com/Jason-Tan1" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-foreground transition-colors">
@@ -83,7 +83,7 @@ function Experience() {
           <img src={futureBuildingsLogo} alt="Future Buildings Logo" className="w-12 h-12 rounded-md mt-1 shadow-sm border border-black/10 object-contain" />
           <div>
             <p className="text-lg">
-              <span className="font-bold text-foreground">Future Buildings & Toro Steel Buildings</span> 
+              <span className="font-bold text-foreground">Future Buildings & Toro Steel Buildings</span>
               <span className="text-muted ml-1">(May 2026 - Present)</span>
             </p>
             <div className="text-lg text-muted flex flex-wrap items-center gap-x-2 gap-y-1 mt-0.5">
@@ -113,7 +113,7 @@ function Experience() {
           <img src={langPalLogo} alt="LangPal Logo" className="w-12 h-12 rounded-md mt-1 shadow-sm border border-black/10 object-contain" />
           <div>
             <p className="text-lg">
-              <span className="font-bold text-foreground">LangPal</span> 
+              <span className="font-bold text-foreground">LangPal</span>
               <span className="text-muted ml-1">(Feb 2026 - April 2026)</span>
             </p>
             <div className="text-lg text-muted flex flex-wrap items-center gap-x-2 gap-y-1 mt-0.5">
@@ -133,7 +133,7 @@ function Experience() {
           <img src={yorkLogo} alt="York University Logo" className="w-12 h-12 rounded-md mt-1 shadow-sm border border-black/10 object-contain" />
           <div>
             <p className="text-lg">
-              <span className="font-bold text-foreground">York University</span> 
+              <span className="font-bold text-foreground">York University</span>
               <span className="text-muted ml-1">(Expected April 2028)</span>
             </p>
             <div className="text-lg text-muted flex flex-wrap items-center gap-x-2 gap-y-1 mt-0.5">
@@ -148,7 +148,7 @@ function Experience() {
           <img src={yuBlueprintLogo} alt="YU Blueprint Logo" className="w-12 h-12 rounded-md mt-1 shadow-sm border border-black/10 object-contain" />
           <div>
             <p className="text-lg">
-              <span className="font-bold text-foreground">YU Blueprint</span> 
+              <span className="font-bold text-foreground">YU Blueprint</span>
               <span className="text-muted ml-1">(Jan 2026 - Present)</span>
             </p>
             <div className="text-lg text-muted flex flex-wrap items-center gap-x-2 gap-y-1 mt-0.5">
@@ -197,7 +197,7 @@ function Goals() {
   return (
     <div>
       <h2 className="text-2xl font-bold mb-8">SMART Goals & Progress</h2>
-      
+
       <div className="mb-12">
         <h3 className="text-xl font-bold text-foreground mb-4">1. Improving Communication in Professional Environments</h3>
         <p className="text-lg text-muted mb-2"><strong className="text-foreground">What:</strong> I want to improve how I communicate my thoughts and ideas in professional environments by speaking more clearly and confidently with coworkers and managers.</p>
