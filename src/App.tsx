@@ -1,6 +1,12 @@
 import { useState } from "react";
-import { Github, Linkedin, FileText, Building } from "lucide-react";
+import { Github, Linkedin, FileText, Building, MapPin } from "lucide-react";
 import JasonTanResume from './assets/Jason_Tan_Resume.pdf';
+import profilePic from './assets/profile.jpg';
+import futureBuildingsLogo from './assets/FutureBuildings.png';
+import lifeByDormLogo from './assets/lifebydorm-logo.png';
+import langPalLogo from './assets/LangPal.png';
+import yorkLogo from './assets/lassonde-logo.png';
+import yuBlueprintLogo from './assets/YUBlueprint.png';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("Home");
@@ -37,26 +43,31 @@ export default function App() {
 
 function Home() {
   return (
-    <div>
-      <p className="text-xl leading-relaxed mb-6">
-        Hey! I am a Software Engineer studying Computer Science at York University. I am deeply passionate about full stack development, AI integration, and building backend infrastructure that solves real problems.
-      </p>
-      <p className="text-xl leading-relaxed mb-6">
-        Currently, I work as a Software Engineer Intern at Future Buildings making backend systems that automate daily workflows. I also love building my own projects, like scaling my housing platform LifeByDorm for thousands of students or creating helpful AI tools. When I am not coding, I enjoy hitting the gym, playing basketball, or practicing guitar.
-      </p>
-      <div className="flex space-x-8 text-lg">
-        <a href="https://github.com/Jason-Tan1" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-foreground transition-colors">
-          <Github size={18} />
-          <span>GitHub</span>
-        </a>
-        <a href="https://linkedin.com/in/jasontan5" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-foreground transition-colors">
-          <Linkedin size={18} />
-          <span>LinkedIn</span>
-        </a>
-        <a href={JasonTanResume} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-foreground transition-colors">
-          <FileText size={18} />
-          <span>Resume</span>
-        </a>
+    <div className="flex flex-col md:flex-row gap-8 items-start">
+      <div className="flex-1">
+        <p className="text-xl leading-relaxed mb-6">
+          Hey! I am a Software Engineer studying Computer Science at York University. I am deeply passionate about full stack development, AI integration, and building backend infrastructure that solves real problems.
+        </p>
+        <p className="text-xl leading-relaxed mb-6">
+          Currently, I work as a Software Engineer Intern at Future Buildings making backend systems that automate daily workflows. I also love building my own projects, like scaling my housing platform LifeByDorm for thousands of students or creating helpful AI tools. When I am not coding, I enjoy hitting the gym, playing basketball, or practicing guitar.
+        </p>
+        <div className="flex space-x-8 text-lg">
+          <a href="https://github.com/Jason-Tan1" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-foreground transition-colors">
+            <Github size={18} />
+            <span>GitHub</span>
+          </a>
+          <a href="https://linkedin.com/in/jasontan5" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-foreground transition-colors">
+            <Linkedin size={18} />
+            <span>LinkedIn</span>
+          </a>
+          <a href={JasonTanResume} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-foreground transition-colors">
+            <FileText size={18} />
+            <span>Resume</span>
+          </a>
+        </div>
+      </div>
+      <div className="w-48 h-48 md:w-56 md:h-56 shrink-0 overflow-hidden rounded-2xl shadow-sm border border-black/10">
+        <img src={profilePic} alt="Jason Tan" className="w-full h-full object-cover" />
       </div>
     </div >
   );
@@ -68,42 +79,85 @@ function Experience() {
       <div className="mb-12">
         <h2 className="text-2xl mb-6">Currently:</h2>
 
-        <div className="mb-8">
-          <p className="text-lg"><span className="font-bold text-foreground">Future Buildings & Toro Steel Buildings</span> (May 2026 - Present)</p>
-          <p className="text-lg text-muted">Software Engineer Intern</p>
-          <p className="text-lg text-muted mt-2">Developing backend APIs and internal tools to automate lead routing and workflows for 250+ sales reps and 3,500,000+ leads.</p>
+        <div className="mb-8 flex items-start gap-4">
+          <img src={futureBuildingsLogo} alt="Future Buildings Logo" className="w-12 h-12 rounded-md mt-1 shadow-sm border border-black/10 object-contain" />
+          <div>
+            <p className="text-lg">
+              <span className="font-bold text-foreground">Future Buildings & Toro Steel Buildings</span> 
+              <span className="text-muted ml-1">(May 2026 - Present)</span>
+            </p>
+            <div className="text-lg text-muted flex flex-wrap items-center gap-x-2 gap-y-1 mt-0.5">
+              <span>Software Engineer Intern</span>
+              <span className="text-muted/40 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1"><MapPin size={16} /> Greater Toronto Area, Canada</span>
+            </div>
+            <p className="text-lg text-muted mt-2">Developing backend APIs and internal tools to automate lead routing and workflows for 250+ sales reps and 3,500,000+ leads.</p>
+          </div>
         </div>
 
-        <div className="mb-4">
-          <p className="text-lg"><span className="font-bold text-foreground">LifeByDorm</span> (Oct 2025 - Present)</p>
-          <p className="text-lg text-muted">Founder</p>
-          <p className="text-lg text-muted mt-2">Founded a student app for university housing reviews, managing all development and growth to reach 10,000+ active users across 100+ universities with 250+ authentic user reviews.</p>
-          <a href="https://lifebydorm.ca" target="_blank" rel="noopener noreferrer" className="text-sm underline text-muted hover:text-foreground mt-2 inline-block">lifebydorm.ca</a>
+        <div className="mb-4 flex items-start gap-4">
+          <img src={lifeByDormLogo} alt="LifeByDorm Logo" className="w-12 h-12 rounded-md mt-1 shadow-sm border border-black/10 object-contain" />
+          <div>
+            <p className="text-lg"><span className="font-bold text-foreground">LifeByDorm</span> (Oct 2025 - Present)</p>
+            <p className="text-lg text-muted">Founder</p>
+            <p className="text-lg text-muted mt-2">Founded a student app for university housing reviews, managing all development and growth to reach 10,000+ active users across 100+ universities with 250+ authentic user reviews.</p>
+            <a href="https://lifebydorm.ca" target="_blank" rel="noopener noreferrer" className="text-sm underline text-muted hover:text-foreground mt-2 inline-block">lifebydorm.ca</a>
+          </div>
         </div>
       </div>
 
       <div className="mb-12">
         <h2 className="text-2xl mb-6">Previously:</h2>
 
-        <div className="mb-4">
-          <p className="text-lg"><span className="font-bold text-foreground">LangPal</span> (Feb 2026 - April 2026)</p>
-          <p className="text-lg text-muted">Software Engineer Intern</p>
-          <p className="text-lg text-muted mt-2">Contributed in developing FastAPI backend infrastructure and custom middleware to integrate real-time speech AI models into a Flutter-based language learning app.</p>
+        <div className="mb-4 flex items-start gap-4">
+          <img src={langPalLogo} alt="LangPal Logo" className="w-12 h-12 rounded-md mt-1 shadow-sm border border-black/10 object-contain" />
+          <div>
+            <p className="text-lg">
+              <span className="font-bold text-foreground">LangPal</span> 
+              <span className="text-muted ml-1">(Feb 2026 - April 2026)</span>
+            </p>
+            <div className="text-lg text-muted flex flex-wrap items-center gap-x-2 gap-y-1 mt-0.5">
+              <span>Software Engineer Intern</span>
+              <span className="text-muted/40 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1"><MapPin size={16} /> Seattle, Washington</span>
+            </div>
+            <p className="text-lg text-muted mt-2">Contributed in developing FastAPI backend infrastructure and custom middleware to integrate real-time speech AI models into a Flutter-based language learning app.</p>
+          </div>
         </div>
       </div>
 
       <div className="mb-12">
         <h2 className="text-2xl mb-6">Education and Clubs:</h2>
 
-        <div className="mb-8">
-          <p className="text-lg"><span className="font-bold text-foreground">York University</span> (Expected April 2028)</p>
-          <p className="text-lg text-muted">B.Sc. Computer Science (Honours)</p>
+        <div className="mb-8 flex items-start gap-4">
+          <img src={yorkLogo} alt="York University Logo" className="w-12 h-12 rounded-md mt-1 shadow-sm border border-black/10 object-contain" />
+          <div>
+            <p className="text-lg">
+              <span className="font-bold text-foreground">York University</span> 
+              <span className="text-muted ml-1">(Expected April 2028)</span>
+            </p>
+            <div className="text-lg text-muted flex flex-wrap items-center gap-x-2 gap-y-1 mt-0.5">
+              <span>B.Sc. Computer Science (Honours)</span>
+              <span className="text-muted/40 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1"><MapPin size={16} /> Toronto</span>
+            </div>
+          </div>
         </div>
 
-        <div className="mb-4">
-          <p className="text-lg"><span className="font-bold text-foreground">YU Blueprint</span> (Jan 2026 - Present)</p>
-          <p className="text-lg text-muted">Software Developer</p>
-          <p className="text-lg text-muted mt-2">Blueprint is a student-run organization that makes technology accessible to local non profit organizations and small businesses</p>
+        <div className="mb-4 flex items-start gap-4">
+          <img src={yuBlueprintLogo} alt="YU Blueprint Logo" className="w-12 h-12 rounded-md mt-1 shadow-sm border border-black/10 object-contain" />
+          <div>
+            <p className="text-lg">
+              <span className="font-bold text-foreground">YU Blueprint</span> 
+              <span className="text-muted ml-1">(Jan 2026 - Present)</span>
+            </p>
+            <div className="text-lg text-muted flex flex-wrap items-center gap-x-2 gap-y-1 mt-0.5">
+              <span>Software Developer</span>
+              <span className="text-muted/40 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1"><MapPin size={16} /> Toronto</span>
+            </div>
+            <p className="text-lg text-muted mt-2">Blueprint is a student-run organization that makes technology accessible to local non profit organizations and small businesses</p>
+          </div>
         </div>
       </div>
     </div>
