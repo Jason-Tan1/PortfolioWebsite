@@ -11,7 +11,7 @@ import yuBlueprintLogo from './assets/YUBlueprint.png';
 export default function App() {
   const [activeTab, setActiveTab] = useState("Home");
 
-  const navItems = ["Home", "Experience", "Projects", "Goals", "Skills", "Contact"];
+  const navItems = ["Home", "Experience", "Projects", "Goals", "Skills", "Reflections", "Contact"];
 
   return (
     <div className="container-narrow">
@@ -35,6 +35,7 @@ export default function App() {
         {activeTab === "Projects" && <Projects />}
         {activeTab === "Goals" && <Goals />}
         {activeTab === "Skills" && <Skills />}
+        {activeTab === "Reflections" && <Reflections />}
         {activeTab === "Contact" && <Contact />}
       </main>
     </div>
@@ -265,6 +266,48 @@ function Contact() {
         <p className="text-lg">
           Email: <a href="mailto:jasontanwork1@gmail.com" className="underline hover:text-foreground transition-colors">jasontanwork1@gmail.com</a>
         </p>
+      </div>
+    </div>
+  );
+}
+
+function Reflections() {
+  return (
+    <div>
+      <div className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Purpose of this ePortfolio</h2>
+        <p className="text-lg text-muted mb-4">
+          The primary purpose of this ePortfolio is to document my professional growth, technical journey, and hands-on experiences during my undergraduate studies and co-op terms. It serves as a comprehensive reflection of my skill development in software engineering, showcasing my ability to solve real-world problems, adapt to professional environments, and continuously learn. This portfolio is designed to present my achievements and competencies to future employers, academic coordinators, and professional contacts.
+        </p>
+      </div>
+
+      <div className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Reflections & Critiques</h2>
+        <h3 className="text-xl font-bold text-foreground mb-4">Week 11 Final Reflection</h3>
+        <p className="text-lg text-muted mb-4">
+          Reflecting on my current co-op term, I have significantly improved my backend infrastructure skills and ability to integrate AI into production environments. One critique of my early work was that I often jumped into implementation without asking enough clarifying questions. As noted in my goals, I have actively worked on this by taking time to outline requirements and summarizing tasks back to my team lead before beginning development. This shift has drastically reduced rework and improved my communication within professional settings.
+        </p>
+        <p className="text-lg text-muted mb-4">
+          Through continuous peer review and feedback, I have also learned the importance of writing maintainable, well-documented code. Moving forward, I aim to maintain this level of professionalism and intentionality in all my technical projects.
+        </p>
+      </div>
+
+      <div className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Undergraduate Competencies</h2>
+        <div className="grid gap-4">
+          <div className="bg-muted/10 p-4 rounded-lg">
+            <h4 className="text-lg font-bold text-foreground mb-2">Technical Application & Problem Solving</h4>
+            <p className="text-md text-muted">Demonstrated through my work at Future Buildings and my various hackathon projects (e.g., TenantShield, Happy Nutrition). I have applied classroom algorithms and data structures to real-world scalable applications.</p>
+          </div>
+          <div className="bg-muted/10 p-4 rounded-lg">
+            <h4 className="text-lg font-bold text-foreground mb-2">Professional Communication</h4>
+            <p className="text-md text-muted">Evidenced by my SMART goals tracking, where I actively led project update meetings and improved my professional dialogue with managers and peers.</p>
+          </div>
+          <div className="bg-muted/10 p-4 rounded-lg">
+            <h4 className="text-lg font-bold text-foreground mb-2">Continuous Learning & Adaptability</h4>
+            <p className="text-md text-muted">Shown through my initiative in learning new frameworks (FastAPI, Next.js) and integrating cutting-edge AI (Gemini, RAG models) into projects outside of standard coursework.</p>
+          </div>
+        </div>
       </div>
     </div>
   );
