@@ -81,7 +81,7 @@ function Experience() {
         <h2 className="text-2xl mb-6">Currently:</h2>
 
         <div className="mb-8 flex items-start gap-4">
-          <img src={futureBuildingsLogo} alt="Future Buildings Logo" className="w-12 h-12 rounded-md mt-1 shadow-sm border border-black/10 object-contain" />
+          <img src={futureBuildingsLogo} alt="Future Buildings Logo" className="w-12 h-12 mt-1 object-contain" />
           <div>
             <p className="text-lg">
               <span className="font-bold text-foreground">Future Buildings & Toro Steel Buildings</span>
@@ -97,7 +97,7 @@ function Experience() {
         </div>
 
         <div className="mb-4 flex items-start gap-4">
-          <img src={lifeByDormLogo} alt="LifeByDorm Logo" className="w-12 h-12 rounded-md mt-1 shadow-sm border border-black/10 object-contain" />
+          <img src={lifeByDormLogo} alt="LifeByDorm Logo" className="w-12 h-12 mt-1 object-contain" />
           <div>
             <p className="text-lg"><span className="font-bold text-foreground">LifeByDorm</span> (Oct 2025 - Present)</p>
             <p className="text-lg text-muted">Founder</p>
@@ -111,7 +111,7 @@ function Experience() {
         <h2 className="text-2xl mb-6">Previously:</h2>
 
         <div className="mb-4 flex items-start gap-4">
-          <img src={langPalLogo} alt="LangPal Logo" className="w-12 h-12 rounded-md mt-1 shadow-sm border border-black/10 object-contain" />
+          <img src={langPalLogo} alt="LangPal Logo" className="w-12 h-12 mt-1 object-contain" />
           <div>
             <p className="text-lg">
               <span className="font-bold text-foreground">LangPal</span>
@@ -131,7 +131,7 @@ function Experience() {
         <h2 className="text-2xl mb-6">Education and Clubs:</h2>
 
         <div className="mb-8 flex items-start gap-4">
-          <img src={yorkLogo} alt="York University Logo" className="w-12 h-12 rounded-md mt-1 shadow-sm border border-black/10 object-contain" />
+          <img src={yorkLogo} alt="York University Logo" className="w-12 h-12 mt-1 object-contain" />
           <div>
             <p className="text-lg">
               <span className="font-bold text-foreground">York University</span>
@@ -146,7 +146,7 @@ function Experience() {
         </div>
 
         <div className="mb-4 flex items-start gap-4">
-          <img src={yuBlueprintLogo} alt="YU Blueprint Logo" className="w-12 h-12 rounded-md mt-1 shadow-sm border border-black/10 object-contain" />
+          <img src={yuBlueprintLogo} alt="YU Blueprint Logo" className="w-12 h-12 mt-1 object-contain" />
           <div>
             <p className="text-lg">
               <span className="font-bold text-foreground">YU Blueprint</span>
