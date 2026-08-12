@@ -11,7 +11,7 @@ import yuBlueprintLogo from './assets/YUBlueprint.png';
 export default function App() {
   const [activeTab, setActiveTab] = useState("Home");
 
-  const navItems = ["Home", "Experience", "Projects", "Goals", "Skills", "Reflections", "Contact"];
+  const navItems = ["Home", "Experience", "Projects", "Timeline", "Goals", "Skills", "Reflections", "Contact"];
 
   return (
     <div className="container-narrow">
@@ -33,6 +33,7 @@ export default function App() {
         {activeTab === "Home" && <Home />}
         {activeTab === "Experience" && <Experience />}
         {activeTab === "Projects" && <Projects />}
+        {activeTab === "Timeline" && <Timeline />}
         {activeTab === "Goals" && <Goals />}
         {activeTab === "Skills" && <Skills />}
         {activeTab === "Reflections" && <Reflections />}
@@ -306,6 +307,149 @@ function Reflections() {
           <div className="bg-muted/10 p-4 rounded-lg">
             <h4 className="text-lg font-bold text-foreground mb-2">Continuous Learning & Adaptability</h4>
             <p className="text-md text-muted">Shown through my initiative in learning new frameworks (FastAPI, Next.js) and integrating cutting-edge AI (Gemini, RAG models) into projects outside of standard coursework.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Timeline() {
+  const events = [
+    {
+      year: "2006",
+      title: "Jason Was Born",
+      description: "Born in Fergus, Ontario. July 31st 2006"
+    },
+    {
+      year: "2022",
+      title: "Grade 10: First Line of Code",
+      description: "Took my first coding class in Grade 10, learning the absolute basics of HTML and CSS."
+    },
+    {
+      year: "Early 2023",
+      title: "Grade 11: The Struggle",
+      description: "Almost failed my Grade 11 programming class and seriously thought coding just wasn't for me."
+    },
+    {
+      year: "Summer 2023",
+      title: "Grade 11: The Turning Point",
+      description: "Retook programming over the summer. Things finally clicked, and started to fall in love with programming."
+    },
+    {
+      year: "Early 2024",
+      title: "Grade 12",
+      description: "Took programming again in Grade 12, had a blast, and created a fully visual Blackjack game."
+    },
+    {
+      year: "Fall 2024",
+      title: "Started University",
+      description: "Began my CS Degree at York University and moved out of my hometown all the way to Toronto."
+    },
+    {
+      year: "2024",
+      title: "Zero Motivation",
+      description: "Had no motivation, drive, or passion to do anything outside of school. Was actually thinking of switching majors because the state of Computer Science"
+    },
+    {
+      year: "Fall 2025",
+      title: "First Hackathon",
+      description: "Participated in my first hackathon at UofT during the start of 2nd year, which is where I found my spark and fell in love with doing hackathons."
+    },
+    {
+      year: "Fall 2025",
+      title: "Won my First Hackathon",
+      description: "Was able to get both 1st Place and \"Best Use of Gemini\" in the same hackathon, which really helped boost my confidence and motivation."
+    },
+    {
+      year: "2025",
+      title: "Founded LifeByDorm",
+      description: "Launched a student app for university housing reviews eventually reaching 10k+ users across Canada.",
+      link: { url: "https://lifebydorm.ca", label: "lifebydorm.ca" }
+    },
+    {
+      year: "Winter 2026",
+      title: "Internship at Startup",
+      description: "Joined a startup based in Seattle Washington where I learnt a lot about working in a fast-paced startup environment, and overall gained lot's of experience."
+    },
+    {
+      year: "Winter 2026",
+      title: "The Grind",
+      description: "The internship search was brutal. I sent out 500+ applications, faced rejection after rejection, attended several hackathons, and leaned heavily on networking. In the final week of my 2nd year, it finally paid off."
+    },
+    {
+      year: "Summer 2026",
+      title: "1st Co-op",
+      description: "Joined Future Buildings as a Software Engineer Intern, where I learnt alot about integration and backend development. Lots of personal growth!"
+    },
+    {
+      year: "Fall 2026 and Winter 2027",
+      title: "2nd Co-op",
+      description: "Joining a bank to build and scale AI systems in Downtown Toronto!"
+    }
+  ];
+
+  return (
+    <div className="animate-in fade-in duration-700">
+      <div className="mb-12">
+        <p className="text-lg text-muted mb-4 max-w-2xl">
+          An overview of my journey, and professional experience as a Software Engineer.
+        </p>
+
+        {/* Alternating Center Timeline */}
+        <div className="relative py-8 z-0">
+          {/* Central Line */}
+          <div className="absolute left-[20px] md:left-1/2 top-4 bottom-0 w-0.5 bg-gradient-to-b from-black/20 via-black/20 to-transparent md:-translate-x-1/2 -z-10"></div>
+
+          <div className="space-y-12">
+            {events.map((event, index) => {
+              const isLeft = index % 2 === 0;
+              return (
+                <div key={index} className="relative flex items-center justify-between w-full group">
+                  {/* Event Dot */}
+                  <div className="absolute left-[20px] md:left-1/2 w-4 h-4 rounded-full bg-background border-[3px] border-foreground -translate-x-1/2 z-10 transition-all duration-300 group-hover:bg-foreground group-hover:scale-125"></div>
+
+                  {/* Left Side (Desktop only) */}
+                  <div className={`hidden md:flex w-1/2 pr-12 flex-col items-end text-right transition-all duration-300 ${!isLeft ? 'invisible' : ''}`}>
+                    <span className="inline-block px-3 py-1 mb-2 text-xs font-semibold tracking-wider uppercase border border-foreground/10 rounded-full bg-foreground/5 text-foreground/70">
+                      {event.year}
+                    </span>
+                    <h3 className="font-bold text-xl text-foreground leading-tight">{event.title}</h3>
+                    <p className="text-md text-muted mt-2 leading-relaxed">{event.description}</p>
+                    {event.link && (
+                      <a href={event.link.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mt-2 text-sm text-foreground/50 hover:text-foreground transition-colors underline underline-offset-2">
+                        {event.link.label} →
+                      </a>
+                    )}
+                  </div>
+
+                  {/* Right Side (Desktop and Mobile) */}
+                  <div className={`w-full pl-[60px] md:w-1/2 md:pl-12 flex flex-col items-start text-left transition-all duration-300 ${isLeft ? 'md:invisible' : ''}`}>
+                    <div className={isLeft ? "block md:hidden" : "block"}>
+                      <span className="inline-block px-3 py-1 mb-2 text-xs font-semibold tracking-wider uppercase border border-foreground/10 rounded-full bg-foreground/5 text-foreground/70">
+                        {event.year}
+                      </span>
+                      <h3 className="font-bold text-xl text-foreground leading-tight">{event.title}</h3>
+                      <p className="text-md text-muted mt-2 leading-relaxed">{event.description}</p>
+                      {event.link && (
+                        <a href={event.link.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mt-2 text-sm text-foreground/50 hover:text-foreground transition-colors underline underline-offset-2">
+                          {event.link.label} →
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+
+            {/* Journey Continues Indicator */}
+            <div className="relative flex items-center justify-center w-full pt-8 pb-4">
+              <div className="absolute left-[20px] md:left-1/2 w-4 h-4 rounded-full bg-background border-[2px] border-dashed border-foreground/50 -translate-x-1/2 z-10 animate-[spin_6s_linear_infinite]"></div>
+
+              <div className="w-full text-center md:pl-0 pl-[60px] md:mt-12 mt-0 text-left md:text-center">
+                <span className="text-muted/70 italic font-serif text-lg tracking-wide">...and the journey continues</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
