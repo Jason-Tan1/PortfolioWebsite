@@ -317,17 +317,12 @@ function Reflections() {
 function Timeline() {
   const events = [
     {
-      year: "2006",
-      title: "Jason Was Born",
-      description: "Born in Fergus, Ontario. July 31st 2006"
-    },
-    {
       year: "2022",
       title: "Grade 10: First Line of Code",
       description: "Took my first coding class in Grade 10, learning the absolute basics of HTML and CSS."
     },
     {
-      year: "Early 2023",
+      year: "2023",
       title: "Grade 11: The Struggle",
       description: "Almost failed my Grade 11 programming class and seriously thought coding just wasn't for me."
     },
@@ -350,6 +345,11 @@ function Timeline() {
       year: "2024",
       title: "Zero Motivation",
       description: "Had no motivation, drive, or passion to do anything outside of school. Was actually thinking of switching majors because the state of Computer Science"
+    },
+    {
+      year: "2025",
+      title: "Start of 2nd Year University",
+      description: "Made a promise to myself I would change my habits and do whatever it takes to achieve my goals"
     },
     {
       year: "Fall 2025",
@@ -375,7 +375,7 @@ function Timeline() {
     {
       year: "Winter 2026",
       title: "The Grind",
-      description: "The internship search was brutal. I sent out 500+ applications, faced rejection after rejection, attended several hackathons, and leaned heavily on networking. In the final week of my 2nd year, it finally paid off."
+      description: "The internship search was brutal. I sent out 500+ applications, faced rejection after rejection, attended several hackathons, and heavily networked. In the final week of my 2nd year, it finally paid off."
     },
     {
       year: "Summer 2026",
@@ -392,14 +392,10 @@ function Timeline() {
   return (
     <div className="animate-in fade-in duration-700">
       <div className="mb-12">
-        <p className="text-lg text-muted mb-4 max-w-2xl">
-          An overview of my journey, and professional experience as a Software Engineer.
-        </p>
-
         {/* Alternating Center Timeline */}
         <div className="relative py-8 z-0">
           {/* Central Line */}
-          <div className="absolute left-[20px] md:left-1/2 top-4 bottom-0 w-0.5 bg-gradient-to-b from-black/20 via-black/20 to-transparent md:-translate-x-1/2 -z-10"></div>
+          <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-black/20 via-black/20 to-transparent md:-translate-x-1/2 -z-10"></div>
 
           <div className="space-y-12">
             {events.map((event, index) => {
