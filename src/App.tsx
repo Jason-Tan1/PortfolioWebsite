@@ -381,6 +381,10 @@ function Timeline() {
       year: "Summer 2026",
       title: "1st Co-op",
       description: "Joined Future Buildings as a Software Engineer Intern, where I learnt alot about integration and backend development. Lots of personal growth!"
+    }, {
+      year: "Summer 2026",
+      title: "Another Search",
+      description: "Only sent out ~50 applications, got multiple interviews across a variety of large companies and landed an offer!"
     },
     {
       year: "Fall 2026 and Winter 2027",
